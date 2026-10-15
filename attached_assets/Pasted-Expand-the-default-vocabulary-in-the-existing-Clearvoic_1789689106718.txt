@@ -1,0 +1,40 @@
+Expand the default vocabulary in the existing Clearvoice AAC Demo without restructuring the application or changing any current vocabulary positions.
+
+This must be an append-only vocabulary expansion. Preserve every existing default ID, position, category, display label, spoken label, and personal-vocabulary behavior.
+
+Add exactly 45 carefully selected default vocabulary items:
+
+- Nine additional high-frequency Core words
+- Four additional items within each of the nine existing More topics
+- At least 12 of the 45 additions must be complete phrases
+
+Prioritize vocabulary that improves everyday communication:
+
+- Common actions and function words
+- Time concepts
+- Location and direction
+- Descriptive words
+- Sensory comfort
+- Body and health communication
+- Social interaction
+- Asking, rejecting, correcting, and clarifying
+- School, home, and community participation
+
+Suggested Core additions include: can, do, have, make, get, give, come, look, and again. Before adding anything, audit the current vocabulary to prevent duplicate meanings or inconsistent wording.
+
+Requirements:
+
+- Increase static vocabulary from 155 to exactly 200 items.
+- Append new entries after existing default positions.
+- Never insert an item between established default items.
+- Keep default entries before personal entries.
+- Give every addition a unique ID, display text, spoken text, keywords, category, type, visual role, urgency value, and stable position.
+- Use age-neutral, respectful language.
+- Avoid infantilizing symbols or wording.
+- Avoid unnecessarily alarming health language.
+- Keep phrases concise and immediately useful.
+- Ensure every new entry is searchable by natural synonyms.
+- Preserve current message composition, topic navigation, sharing, accessibility, offline behavior, and local-only privacy.
+- Do not add predictive AI or remote vocabulary services.
+
+Extend the automated tests to verify the exact new total, unique IDs, stable legacy positions, searchability, topic counts, and default-before-personal ordering.

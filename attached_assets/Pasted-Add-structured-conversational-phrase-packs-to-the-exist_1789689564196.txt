@@ -1,0 +1,48 @@
+Add structured conversational phrase packs to the existing Clearvoice topic system without replacing free word-by-word composition.
+
+Add exactly four new phrases to each of the nine More topics, for 36 new phrases total.
+
+The phrase collection should cover these communication purposes across appropriate topics:
+
+- Requesting something
+- Rejecting or correcting
+- Asking for assistance
+- Expressing discomfort
+- Describing feelings
+- Asking a question
+- Clarifying a misunderstanding
+- Requesting more time
+- Changing an activity
+- Social greetings and responses
+- Communicating pain or health needs
+- Expressing preference and personal choice
+
+Examples of the intended tone include:
+
+- “I want to see someone.”
+- “Something different, please.”
+- “Where are we going?”
+- “I want to do something else.”
+- “I need more time.”
+- “Please help me find it.”
+- “It hurts here.”
+- “I need some space.”
+
+Audit the existing vocabulary before selecting the final phrases. Do not create duplicate phrases or phrases that communicate essentially the same meaning.
+
+Requirements:
+
+- Append phrases after existing default items in their topic.
+- Do not move or rename existing vocabulary.
+- Keep each phrase as one message segment.
+- Never automatically reorder, rewrite, conjugate, or replace the user’s selection.
+- Give every phrase reviewed display text and explicit spoken text.
+- Expand contractions in spoken text when that improves pronunciation.
+- Add useful search synonyms and conversational keywords.
+- Preserve default-before-personal ordering.
+- Keep the current review-before-speaking behavior unchanged.
+- Ensure topic grids remain usable on phones and tablets.
+- Do not introduce nested menus beyond the existing topic navigation.
+- Preserve keyboard, screen-reader, offline, import/export, and privacy behavior.
+
+Extend the automated tests to verify all 36 phrases, their topic assignments, spoken text, searchability, single-segment behavior, stable ordering, and export compatibility.

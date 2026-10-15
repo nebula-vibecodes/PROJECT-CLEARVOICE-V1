@@ -1,0 +1,16 @@
+- [Local data boundary](local-data-boundary.md) — Keep settings and personal vocabulary local-only; default vocabulary positions remain stable while personal entries reorder separately.
+- [Drawer focus tests](drawer-focus-tests.md) — jsdom needs a visible-rectangle shim and explicit opener focus to exercise browser-like focus trapping and restoration.
+- [Starter symbol delivery](starter-symbols.md) — Bundle pictograms in the offline shell and fall back to text for unknown local asset IDs.
+- [Mulberry phrase aliases](mulberry-phrase-aliases.md) — Share a base symbol for polite modifiers only when they preserve the same AAC concept; keep nuanced phrases as fallbacks.
+- [Core symbol fallbacks](core-symbol-fallbacks.md) — Keep abstract Core concepts text-only when Mulberry lacks a direct, non-misleading match.
+- [More category symbols](more-category-symbols.md) — Broad Mulberry art may decorate navigation controls, but accessible names must remain the category labels.
+- [People symbol audit](people-symbol-audit.md) — Prefer exact neutral people/relationship symbols; keep gendered or semantically partial matches as text.
+- [Food symbol audit](food-symbol-audit.md) — Do not substitute generic food or a specific meal for Snack; map only exact eating-state and completion concepts.
+- [Places symbol audit](places-symbol-audit.md) — Map only exact locations; keep generic buildings, directional fragments, and compound travel phrases text-only.
+- [Activities symbol audit](activities-symbol-audit.md) — Map concrete actions with clear artwork; keep compound, turn-taking, and abstract activity phrases text-only.
+- [Home symbol audit](home-symbol-audit.md) — Map exact household objects or clear home activities; do not substitute kitchen objects or partial compound requests.
+- [School/work symbol audit](school-work-symbol-audit.md) — Keep exact classroom, object, and action matches; leave identity- and context-dependent work phrases text-only.
+- [Feelings symbol audit](feelings-symbol-audit.md) — Do not map gendered faces or nearby actions to unqualified feelings; preserve text when emotion meaning is not exact and neutral.
+- [Personal-items symbol audit](personal-items-symbol-audit.md) — Map neutral concrete possessions only; reject narrower, gendered, medical, or incomplete request/ownership matches.
+- [Health symbol audit](health-symbol-audit.md) — Prefer direct neutral physical-need matches; preserve original urgent pictograms and keep ambiguous illness/care phrases text-only.
+- [Browser failure-test mocks](browser-failure-test-mocks.md) — With Vitest restoreMocks and jsdom, install or patch clipboard/speech mocks inside each test and restore browser descriptors explicitly.

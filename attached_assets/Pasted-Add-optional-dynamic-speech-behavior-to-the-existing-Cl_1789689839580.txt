@@ -1,0 +1,34 @@
+Add optional dynamic speech behavior to the existing Clearvoice AAC Demo without replacing or disrupting the current speech system.
+
+Create a “Speech behavior” setting with two modes:
+
+1. Review first — preserve the current behavior and make this the default.
+2. Speak on selection — immediately speak a selected word or phrase while also adding it to the message.
+
+Use the existing browser speech engine, selected voice, speech rate, cancellation protection, and rapid-repeat protection. Do not introduce cloud speech, AI voice generation, remote processing, or message transmission.
+
+Speak-on-selection requirements:
+
+- Produce exactly one utterance for each valid selection.
+- Use the item’s spoken text, not necessarily its display text.
+- Continue adding the item as one normal message segment.
+- Cancel the previous selection utterance when a new item is chosen.
+- Prevent rapid double activation from producing duplicate speech.
+- Allow the full composed message to be spoken normally afterward.
+- Preserve the existing Stop Speaking behavior.
+- Treat unsupported speech APIs and missing saved voices safely.
+- Do not enable immediate speech automatically for existing users.
+
+Improve personal-vocabulary pronunciation:
+
+- Add an optional separate spoken-text field to the personal vocabulary editor.
+- Keep display text and spoken text independent.
+- Default spoken text to display text when no customization is supplied.
+- Add a “Preview pronunciation” control.
+- Preview using the currently selected browser voice and speech rate.
+- Validate and sanitize spoken text using the existing local-data rules.
+- Preserve custom spoken text through export and import.
+
+Keep all speech preferences local to the device. Do not store what the user speaks or compose.
+
+Extend the automated tests to cover both speech modes, selection speech, cancellation, double-activation protection, exact phrase pronunciation, personal spoken text, pronunciation preview, unavailable speech support, missing-voice fallback, preference persistence, import validation, and unchanged review-first behavior.

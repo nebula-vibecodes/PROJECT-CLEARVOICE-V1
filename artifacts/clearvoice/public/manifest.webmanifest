@@ -1,0 +1,19 @@
+{
+  "name": "Clearvoice AAC demo",
+  "short_name": "Clearvoice",
+  "description": "A calm, local-first AAC communication usability demo.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ec",
+  "theme_color": "#287c73",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

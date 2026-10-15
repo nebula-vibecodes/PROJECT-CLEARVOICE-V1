@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Clearvoice"
+description = "A calm, touch-friendly AAC communication usability demo with a persistent message composer, navigation, and responsive vocabulary grid."
+version = "1.0.0"
+id = "artifacts/clearvoice"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21071
+
+[services.development]
+run = "pnpm --filter @workspace/clearvoice run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/clearvoice", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/clearvoice/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21071"
+BASE_PATH = "/"

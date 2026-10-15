@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .line { fill: none; stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .solid { fill: currentColor; }
+      .soft { fill: currentColor; opacity: .18; }
+    </style>
+  </defs>
+
+  <symbol id="person" viewBox="0 0 64 64">
+    <circle class="solid" cx="32" cy="17" r="8"/>
+    <path class="line" d="M17 53c1-12 7-19 15-19s14 7 15 19M23 38l-7 8M41 38l7 8"/>
+  </symbol>
+  <symbol id="person-facing" viewBox="0 0 64 64">
+    <circle class="solid" cx="22" cy="18" r="7"/>
+    <circle class="solid" cx="46" cy="18" r="7"/>
+    <path class="line" d="M9 53c1-10 5-16 13-16s12 6 13 16M29 53c1-10 5-16 13-16s12 6 13 16M31 19h2"/>
+  </symbol>
+  <symbol id="person-reaching" viewBox="0 0 64 64">
+    <circle class="solid" cx="22" cy="18" r="8"/>
+    <path class="line" d="M22 28v17M22 34l18-6 12 5M22 45l-8 10M22 45l12 10M47 23l8 5-8 5"/>
+  </symbol>
+  <symbol id="person-resting" viewBox="0 0 64 64">
+    <circle class="solid" cx="20" cy="25" r="7"/>
+    <path class="line" d="M25 31l10 10 16-1M35 41l-13 12M38 41l12 12M12 17h8M10 12h5"/>
+  </symbol>
+  <symbol id="person-boundary" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M8 9h48v46H8zM8 17h48"/>
+  </symbol>
+  <symbol id="hand" viewBox="0 0 64 64">
+    <path class="line" d="M17 29V17c0-3 5-3 5 0v10-16c0-3 5-3 5 0v16-19c0-3 5-3 5 0v20-15c0-3 5-3 5 0v19l5-5c2-2 6 1 4 4l-8 12c-3 5-8 7-14 7h-3c-7 0-12-6-12-13V29z"/>
+  </symbol>
+  <symbol id="stop-sign" viewBox="0 0 64 64">
+    <path class="line" d="M22 8h20l14 14v20L42 56H22L8 42V22z"/>
+    <path class="line" d="M20 32h24"/>
+  </symbol>
+  <symbol id="heart" viewBox="0 0 64 64">
+    <path class="line" d="M32 53S10 40 10 23c0-7 5-11 11-11 5 0 9 3 11 7 2-4 6-7 11-7 6 0 11 4 11 11 0 17-22 30-22 30z"/>
+  </symbol>
+  <symbol id="target" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <circle class="line" cx="32" cy="32" r="12"/>
+    <circle class="solid" cx="32" cy="32" r="4"/>
+  </symbol>
+  <symbol id="plus" viewBox="0 0 64 64">
+    <circle class="soft" cx="32" cy="32" r="23"/>
+    <path class="line" d="M32 18v28M18 32h28"/>
+  </symbol>
+  <symbol id="arrow-right" viewBox="0 0 64 64">
+    <path class="line" d="M9 32h43M38 18l14 14-14 14"/>
+  </symbol>
+  <symbol id="arrow-come" viewBox="0 0 64 64">
+    <path class="line" d="M55 32H12M26 18L12 32l14 14"/>
+    <circle class="solid" cx="49" cy="15" r="6"/>
+  </symbol>
+  <symbol id="slash" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <path class="line" d="M17 17l30 30"/>
+  </symbol>
+  <symbol id="object" viewBox="0 0 64 64">
+    <path class="line" d="M17 19h30v30H17zM24 19v-6h16v6M24 31h16M24 40h10"/>
+  </symbol>
+  <symbol id="question" viewBox="0 0 64 64">
+    <path class="line" d="M10 12h44v31H27L17 53V43h-7z"/>
+    <path class="line" d="M27 25c1-7 12-7 13 0 0 5-8 5-8 11M32 39h.1"/>
+  </symbol>
+  <symbol id="pin-question" viewBox="0 0 64 64">
+    <path class="line" d="M32 55S16 39 16 27a16 16 0 1 1 32 0c0 12-16 28-16 28z"/>
+    <path class="line" d="M28 24c1-5 9-5 10 0 0 4-6 4-6 8M32 38h.1"/>
+  </symbol>
+  <symbol id="check" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <path class="line" d="M20 33l8 8 17-18"/>
+  </symbol>
+  <symbol id="cross" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <path class="line" d="M22 22l20 20M42 22L22 42"/>
+  </symbol>
+  <symbol id="eye" viewBox="0 0 64 64">
+    <path class="line" d="M7 32s9-15 25-15 25 15 25 15-9 15-25 15S7 32 7 32z"/>
+    <circle class="line" cx="32" cy="32" r="7"/>
+  </symbol>
+  <symbol id="swap" viewBox="0 0 64 64">
+    <path class="line" d="M10 22h42M42 13l10 9-10 9M54 42H12M22 33l-10 9 10 9"/>
+  </symbol>
+  <symbol id="action" viewBox="0 0 64 64">
+    <path class="line" d="M15 47l9-25 25-9-9 25zM24 22l18 18M14 52l-5 5M50 14l5-5"/>
+  </symbol>
+  <symbol id="box-hand" viewBox="0 0 64 64">
+    <path class="line" d="M16 25h32v28H16zM24 25V15h16v10M24 38h16M24 46h9"/>
+    <path class="line" d="M13 22l-5 8 8 6M51 22l5 8-8 6"/>
+  </symbol>
+  <symbol id="tool" viewBox="0 0 64 64">
+    <path class="line" d="M13 51l27-27M38 14a10 10 0 0 0 12 12l6 6-8 8-6-6A10 10 0 0 0 30 22"/>
+    <circle class="line" cx="17" cy="48" r="7"/>
+  </symbol>
+  <symbol id="receive" viewBox="0 0 64 64">
+    <path class="line" d="M10 37h16l6 7h16l7-7M10 37v14h45V37M32 9v25M23 25l9 9 9-9"/>
+  </symbol>
+  <symbol id="offer" viewBox="0 0 64 64">
+    <path class="line" d="M11 36h15l6 7h15l8-7M11 36v15h44V36M32 9v25M23 18l9-9 9 9"/>
+  </symbol>
+  <symbol id="repeat" viewBox="0 0 64 64">
+    <path class="line" d="M15 23h32l-7-7M49 41H17l7 7M47 23l5 6M17 41l-5-6"/>
+  </symbol>
+  <symbol id="clock" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <path class="line" d="M32 19v14l9 6"/>
+  </symbol>
+  <symbol id="pause-rest" viewBox="0 0 64 64">
+    <use href="#person-resting"/>
+    <path class="line" d="M43 16v12M51 16v12"/>
+  </symbol>
+  <symbol id="sound" viewBox="0 0 64 64">
+    <path class="line" d="M10 27h10l12-10v30L20 37H10zM41 24c5 5 5 11 0 16M48 18c9 8 9 20 0 28"/>
+  </symbol>
+  <symbol id="sun-shade" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="29" r="9"/>
+    <path class="line" d="M32 7v8M32 43v8M10 29h8M46 29h8M16 13l6 6M42 39l6 6M48 13l-6 6M22 39l-6 6M12 56h40"/>
+  </symbol>
+  <symbol id="speech-repeat" viewBox="0 0 64 64">
+    <path class="line" d="M8 12h40v27H25L15 49V39H8z"/>
+    <path class="line" d="M24 25h16M24 31h10M45 45l8-5M53 40l-3-8"/>
+  </symbol>
+  <symbol id="slow" viewBox="0 0 64 64">
+    <use href="#clock"/>
+    <path class="line" d="M32 19v13h-9M47 50l7 7M54 50l-7 7"/>
+  </symbol>
+  <symbol id="speech-check" viewBox="0 0 64 64">
+    <path class="line" d="M8 12h48v30H25L15 52V42H8z"/>
+    <path class="line" d="M20 27l7 7 17-17"/>
+  </symbol>
+  <symbol id="speech-no-heart" viewBox="0 0 64 64">
+    <path class="line" d="M8 11h48v31H25L15 52V42H8z"/>
+    <path class="line" d="M20 23l15 15M35 23L20 38"/>
+    <path class="line" d="M47 51s-8-5-8-11c0-3 4-5 8-1 4-4 8-2 8 1 0 6-8 11-8 11z"/>
+  </symbol>
+  <symbol id="pain" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M47 12l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+  </symbol>
+  <symbol id="pain-location" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M47 17v13M41 24h12M47 42v7"/>
+  </symbol>
+  <symbol id="care" viewBox="0 0 64 64">
+    <use href="#hand"/>
+    <path class="line" d="M48 12v16M40 20h16"/>
+  </symbol>
+  <symbol id="caregiver" viewBox="0 0 64 64">
+    <use href="#person-facing"/>
+    <path class="line" d="M23 10v16M15 18h16M43 44v9"/>
+  </symbol>
+  <symbol id="bathroom" viewBox="0 0 64 64">
+    <path class="line" d="M13 55V10h38v45M23 10v13h18V10M23 23h18M25 55V39h14v16"/>
+    <circle class="solid" cx="32" cy="31" r="3"/>
+  </symbol>
+  <symbol id="pause" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="22"/>
+    <path class="line" d="M26 22v20M38 22v20"/>
+  </symbol>
+  <symbol id="speech-waves" viewBox="0 0 64 64">
+    <path class="line" d="M8 12h34v25H23L14 47V37H8zM48 21c5 5 5 12 0 17M55 15c9 8 9 21 0 29"/>
+  </symbol>
+  <symbol id="stop-waves" viewBox="0 0 64 64">
+    <path class="line" d="M8 12h34v25H23L14 47V37H8zM49 25v14M49 45h.1"/>
+  </symbol>
+  <symbol id="undo-arrow" viewBox="0 0 64 64">
+    <path class="line" d="M18 23H8l10-10M9 23c20-13 39-4 39 13 0 12-10 18-22 18"/>
+  </symbol>
+  <symbol id="magnify" viewBox="0 0 64 64">
+    <circle class="line" cx="28" cy="28" r="16"/>
+    <path class="line" d="M40 40l14 14"/>
+  </symbol>
+  <symbol id="back-arrow" viewBox="0 0 64 64">
+    <path class="line" d="M53 32H11M25 18L11 32l14 14"/>
+  </symbol>
+  <symbol id="gear" viewBox="0 0 64 64">
+    <circle class="line" cx="32" cy="32" r="9"/>
+    <path class="line" d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M49 15l-6 6M21 43l-6 6"/>
+  </symbol>
+  <symbol id="share" viewBox="0 0 64 64">
+    <circle class="line" cx="17" cy="32" r="6"/>
+    <circle class="line" cx="47" cy="16" r="6"/>
+    <circle class="line" cx="47" cy="48" r="6"/>
+    <path class="line" d="M22 29l19-10M22 35l19 10"/>
+  </symbol>
+
+  <symbol id="core-i" viewBox="0 0 64 64"><use href="#person"/></symbol>
+  <symbol id="core-you" viewBox="0 0 64 64"><use href="#person-facing"/></symbol>
+  <symbol id="core-want" viewBox="0 0 64 64"><use href="#person-reaching"/></symbol>
+  <symbol id="core-need" viewBox="0 0 64 64"><use href="#plus"/><use href="#hand" transform="translate(12 0) scale(.62)"/></symbol>
+  <symbol id="core-more" viewBox="0 0 64 64"><use href="#plus"/><path class="line" d="M45 16v12M39 22h12"/></symbol>
+  <symbol id="core-help" viewBox="0 0 64 64"><use href="#hand"/></symbol>
+  <symbol id="core-go" viewBox="0 0 64 64"><use href="#arrow-right"/></symbol>
+  <symbol id="core-stop" viewBox="0 0 64 64"><use href="#stop-sign"/></symbol>
+  <symbol id="core-like" viewBox="0 0 64 64"><use href="#heart"/></symbol>
+  <symbol id="core-not" viewBox="0 0 64 64"><use href="#slash"/></symbol>
+  <symbol id="core-that" viewBox="0 0 64 64"><use href="#target"/></symbol>
+  <symbol id="core-it" viewBox="0 0 64 64"><use href="#object"/></symbol>
+  <symbol id="core-what" viewBox="0 0 64 64"><use href="#question"/></symbol>
+  <symbol id="core-where" viewBox="0 0 64 64"><use href="#pin-question"/></symbol>
+  <symbol id="core-good" viewBox="0 0 64 64"><use href="#heart"/></symbol>
+  <symbol id="core-bad" viewBox="0 0 64 64"><use href="#slash"/></symbol>
+  <symbol id="core-yes" viewBox="0 0 64 64"><use href="#check"/></symbol>
+  <symbol id="core-no" viewBox="0 0 64 64"><use href="#cross"/></symbol>
+  <symbol id="core-feel" viewBox="0 0 64 64"><use href="#person"/><use href="#heart" transform="translate(20 22) scale(.38)"/></symbol>
+  <symbol id="core-different" viewBox="0 0 64 64"><use href="#swap"/></symbol>
+  <symbol id="core-can" viewBox="0 0 64 64"><use href="#action"/></symbol>
+  <symbol id="core-do" viewBox="0 0 64 64"><use href="#action"/></symbol>
+  <symbol id="core-have" viewBox="0 0 64 64"><use href="#box-hand"/></symbol>
+  <symbol id="core-make" viewBox="0 0 64 64"><use href="#tool"/></symbol>
+  <symbol id="core-get" viewBox="0 0 64 64"><use href="#receive"/></symbol>
+  <symbol id="core-give" viewBox="0 0 64 64"><use href="#offer"/></symbol>
+  <symbol id="core-come" viewBox="0 0 64 64"><use href="#arrow-come"/></symbol>
+  <symbol id="core-look" viewBox="0 0 64 64"><use href="#eye"/></symbol>
+  <symbol id="core-again" viewBox="0 0 64 64"><use href="#repeat"/></symbol>
+
+  <symbol id="phrase-i-need-help" viewBox="0 0 64 64"><use href="#person-reaching"/><use href="#hand" transform="translate(27 7) scale(.55)"/></symbol>
+  <symbol id="phrase-please-stop" viewBox="0 0 64 64"><use href="#hand"/><use href="#stop-sign" transform="translate(21 23) scale(.55)"/></symbol>
+  <symbol id="phrase-give-me-a-minute" viewBox="0 0 64 64"><use href="#clock"/><path class="line" d="M48 9v12M42 15h12"/></symbol>
+  <symbol id="phrase-i-dont-know" viewBox="0 0 64 64"><use href="#person"/><use href="#question" transform="translate(18 0) scale(.72)"/></symbol>
+  <symbol id="phrase-i-need-a-break" viewBox="0 0 64 64"><use href="#person-resting"/><use href="#pause" transform="translate(22 0) scale(.48)"/></symbol>
+  <symbol id="phrase-im-uncomfortable" viewBox="0 0 64 64"><use href="#person-boundary"/></symbol>
+  <symbol id="phrase-too-loud" viewBox="0 0 64 64"><use href="#sound"/></symbol>
+  <symbol id="phrase-too-bright" viewBox="0 0 64 64"><use href="#sun-shade"/></symbol>
+  <symbol id="phrase-not-that" viewBox="0 0 64 64"><use href="#target"/><path class="line" d="M17 17l30 30"/></symbol>
+  <symbol id="phrase-say-it-again" viewBox="0 0 64 64"><use href="#speech-repeat"/></symbol>
+  <symbol id="phrase-slower-please" viewBox="0 0 64 64"><use href="#slow"/></symbol>
+  <symbol id="phrase-i-cant-understand" viewBox="0 0 64 64"><use href="#person"/><use href="#question" transform="translate(18 0) scale(.72)"/><path class="line" d="M42 12l10 10M52 12L42 22"/></symbol>
+  <symbol id="phrase-yes-please" viewBox="0 0 64 64"><use href="#speech-check"/></symbol>
+  <symbol id="phrase-no-thank-you" viewBox="0 0 64 64"><use href="#speech-no-heart"/></symbol>
+  <symbol id="phrase-i-am-hurt" viewBox="0 0 64 64"><use href="#pain"/></symbol>
+  <symbol id="phrase-call-my-caregiver" viewBox="0 0 64 64"><use href="#caregiver"/><path class="line" d="M9 19h11M9 25h7"/></symbol>
+
+  <symbol id="urgent-hurt" viewBox="0 0 64 64"><use href="#pain-location"/></symbol>
+  <symbol id="urgent-pain" viewBox="0 0 64 64"><use href="#pain"/></symbol>
+  <symbol id="urgent-care" viewBox="0 0 64 64"><use href="#care"/></symbol>
+  <symbol id="urgent-it-hurts-here" viewBox="0 0 64 64"><use href="#pain-location"/></symbol>
+  <symbol id="essential-bathroom" viewBox="0 0 64 64"><use href="#bathroom"/></symbol>
+  <symbol id="essential-break" viewBox="0 0 64 64"><use href="#pause-rest"/></symbol>
+
+  <symbol id="control-speak" viewBox="0 0 64 64"><use href="#speech-waves"/></symbol>
+  <symbol id="control-stop-speaking" viewBox="0 0 64 64"><use href="#stop-waves"/></symbol>
+  <symbol id="control-undo" viewBox="0 0 64 64"><use href="#undo-arrow"/></symbol>
+  <symbol id="control-clear" viewBox="0 0 64 64"><use href="#cross"/></symbol>
+  <symbol id="control-search" viewBox="0 0 64 64"><use href="#magnify"/></symbol>
+  <symbol id="control-back" viewBox="0 0 64 64"><use href="#back-arrow"/></symbol>
+  <symbol id="control-settings" viewBox="0 0 64 64"><use href="#gear"/></symbol>
+  <symbol id="control-share" viewBox="0 0 64 64"><use href="#share"/></symbol>
+
+  <symbol id="health-sick" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M18 14l-5-4M46 14l5-4M49 31c5 2 7 6 5 10M15 31c-5 2-7 6-5 10"/>
+    <path class="line" d="M27 42c3 2 7 2 10 0"/>
+  </symbol>
+  <symbol id="health-doctor" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <circle class="line" cx="47" cy="17" r="10"/>
+    <path class="line" d="M47 11v12M41 17h12"/>
+  </symbol>
+  <symbol id="health-nurse" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <use href="#heart" transform="translate(37 7) scale(.35)"/>
+  </symbol>
+  <symbol id="health-dizzy" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M43 12c10 1 12 13 4 18-7 4-14-3-10-9 3-4 9-2 9 2"/>
+  </symbol>
+  <symbol id="health-fever" viewBox="0 0 64 64">
+    <use href="#person"/>
+    <path class="line" d="M44 17c4-4 4-8 0-12M51 20c5-5 5-10 1-14M38 17c3-3 3-6 0-9"/>
+  </symbol>
+</svg>
