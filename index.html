@@ -4,25 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7f8ff" />
-    <title>Clearvoice AAC — MVP</title>
+    <title>Clearvoice AAC Enhanced  MVP</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell" aria-label="Clearvoice AAC communicator">
       <header class="topbar">
-        <div class="brand"><span class="brand-mark" aria-hidden="true">◌</span> Clearvoice</div>
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span> Clearvoice <span class="version">Enhanced</span></div>
         <div class="top-actions">
-          <button class="icon-button" id="quietToggle" aria-pressed="false" aria-label="Turn quiet mode on" title="Quiet mode">⌁</button>
-          <button class="icon-button" id="settingsToggle" aria-expanded="false" aria-controls="settingsPanel" aria-label="Open communication settings" title="Settings">⚙</button>
+          <button class="icon-button" id="historyToggle" aria-expanded="false" aria-controls="historyPanel" aria-label="Open message history" title="History"></button>
+          <button class="icon-button" id="favoritesToggle" aria-expanded="false" aria-controls="favoritesPanel" aria-label="Open favorites" title="Favorites"></button>
+          <button class="icon-button" id="darkModeToggle" aria-pressed="false" aria-label="Toggle dark mode" title="Dark mode"></button>
+          <button class="icon-button" id="quietToggle" aria-pressed="false" aria-label="Turn quiet mode on" title="Quiet mode"></button>
+          <button class="icon-button" id="settingsToggle" aria-expanded="false" aria-controls="settingsPanel" aria-label="Open communication settings" title="Settings"></button>
         </div>
       </header>
 
       <section class="message-region" aria-label="Message composition">
         <div class="message-bar" id="messageBar" aria-live="polite" aria-label="Current message">Choose words to build your message</div>
         <div class="message-actions">
-          <button class="action secondary" id="undoButton" disabled>↶ <span>Undo</span></button>
+          <button class="action secondary" id="undoButton" disabled> <span>Undo</span></button>
           <button class="action secondary" id="clearButton" disabled>Clear</button>
-          <button class="action speak" id="speakButton" disabled><span aria-hidden="true">▶</span> Speak</button>
+          <button class="action secondary" id="saveFavorite" disabled> <span>Save</span></button>
+          <button class="action speak" id="speakButton" disabled><span aria-hidden="true"></span> Speak</button>
         </div>
       </section>
 
@@ -31,6 +35,7 @@
         <button class="tab" data-view="quick">Quick phrases</button>
         <button class="tab" data-view="more">More</button>
         <button class="tab" data-view="letters">Spell</button>
+        <button class="tab" data-view="custom">Custom</button>
       </nav>
 
       <section class="content" aria-live="polite">
@@ -39,27 +44,55 @@
             <p class="eyebrow" id="viewEyebrow">EVERYDAY WORDS</p>
             <h1 id="viewTitle">Say what you mean</h1>
           </div>
-          <button class="finder" id="finderButton" aria-label="Find a word or phrase">⌕ <span>Find</span></button>
+          <button class="finder" id="finderButton" aria-label="Find a word or phrase"> <span>Find</span></button>
         </div>
         <div id="vocabularyGrid" class="vocabulary-grid" role="group" aria-label="Core vocabulary"></div>
       </section>
 
       <section class="settings-panel" id="settingsPanel" hidden aria-label="Communication settings">
-        <div class="panel-title"><h2>Communication settings</h2><button class="close" id="closeSettings" aria-label="Close settings">×</button></div>
+        <div class="panel-title"><h2>Communication settings</h2><button class="close" id="closeSettings" aria-label="Close settings"></button></div>
         <label class="setting-row"><span>Button size</span><select id="buttonSize"><option value="regular">Regular</option><option value="large">Large</option><option value="extra-large">Extra large</option></select></label>
         <label class="setting-row"><span>Text size</span><select id="textSize"><option value="regular">Regular</option><option value="large">Large</option></select></label>
         <label class="setting-row toggle"><span>High contrast</span><input id="contrastToggle" type="checkbox" /></label>
         <label class="setting-row toggle"><span>Reduced motion</span><input id="motionToggle" type="checkbox" /></label>
         <label class="setting-row"><span>Voice speed</span><input id="speechRate" type="range" min="0.7" max="1.3" value="1" step="0.1" /><output id="rateValue">Normal</output></label>
+        <label class="setting-row"><span>Voice pitch</span><input id="speechPitch" type="range" min="0.8" max="1.2" value="1" step="0.1" /><output id="pitchValue">Normal</output></label>
+        <label class="setting-row"><span>Voice type</span><select id="voiceType"><option value="default">Default</option><option value="male">Male</option><option value="female">Female</option><option value="child">Child</option></select></label>
         <p class="privacy-note">Your message and preferences stay in this browser. Nothing is sent to a server.</p>
+      </section>
+
+      <section class="history-panel" id="historyPanel" hidden aria-label="Message history">
+        <div class="panel-title"><h2>Message History</h2><button class="close" id="closeHistory" aria-label="Close history"></button></div>
+        <div id="historyList" class="history-list"></div>
+        <button class="action clear-history" id="clearHistoryButton">Clear History</button>
+      </section>
+
+      <section class="favorites-panel" id="favoritesPanel" hidden aria-label="Favorites">
+        <div class="panel-title"><h2>Saved Favorites</h2><button class="close" id="closeFavorites" aria-label="Close favorites"></button></div>
+        <div id="favoritesList" class="favorites-list"></div>
+        <button class="action clear-favorites" id="clearFavoritesButton">Clear Favorites</button>
       </section>
     </main>
 
     <dialog id="finderDialog" aria-labelledby="finderTitle">
       <form method="dialog" class="finder-dialog">
-        <div class="dialog-header"><div><p class="eyebrow">WORD FINDER</p><h2 id="finderTitle">Find a word or phrase</h2></div><button value="cancel" class="close" aria-label="Close finder">×</button></div>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="Try “help”, “break”, or “pizza”" aria-label="Search vocabulary" />
+        <div class="dialog-header"><div><p class="eyebrow">WORD FINDER</p><h2 id="finderTitle">Find a word or phrase</h2></div><button value="cancel" class="close" aria-label="Close finder"></button></div>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Try help, break, or pizza" aria-label="Search vocabulary" />
         <div id="searchResults" class="search-results" role="list"></div>
+      </form>
+    </dialog>
+
+    <dialog id="customWordDialog" aria-labelledby="customWordTitle">
+      <form method="dialog" class="custom-dialog">
+        <div class="dialog-header"><div><p class="eyebrow">ADD CUSTOM WORD</p><h2 id="customWordTitle">Add to vocabulary</h2></div><button value="cancel" class="close" aria-label="Close"></button></div>
+        <label for="customWordInput">Word or phrase:</label>
+        <input id="customWordInput" type="text" autocomplete="off" placeholder="Enter custom word or phrase" aria-label="Custom word input" />
+        <label for="customSymbolInput">Symbol (optional):</label>
+        <input id="customSymbolInput" type="text" autocomplete="off" placeholder="Emoji or symbol" aria-label="Custom symbol input" />
+        <div class="dialog-actions">
+          <button value="cancel" class="action secondary">Cancel</button>
+          <button id="confirmCustomWord" class="action speak">Add</button>
+        </div>
       </form>
     </dialog>
 
